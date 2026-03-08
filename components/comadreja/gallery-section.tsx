@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 const galleryItems = [
   { id: 1, category: "obra", label: "Escena teatral" },

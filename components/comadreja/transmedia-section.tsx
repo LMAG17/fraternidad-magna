@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Theater, Film, BookOpen, Clock, Award } from "lucide-react"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function TransmediaSection() {
   return (

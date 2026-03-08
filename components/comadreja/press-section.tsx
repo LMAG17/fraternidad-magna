@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { FileText, Image, FileDown, Mail } from "lucide-react"
 import Link from "next/link"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function PressSection() {
   const materials = [

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Theater, Film, BookOpen } from "lucide-react"
 import Link from "next/link"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function HeroSection() {
   return (

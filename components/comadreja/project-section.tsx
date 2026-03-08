@@ -1,7 +1,7 @@
 "use client"
 
 import { BookOpen, Theater, Film } from "lucide-react"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function ProjectSection() {
   return (

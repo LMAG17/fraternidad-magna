@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, Instagram, Facebook, Youtube } from "lucide-react"
 import { useState } from "react"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({

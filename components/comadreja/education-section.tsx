@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Clock, Users, MessageSquare } from "lucide-react"
 import Link from "next/link"
-import { AnimatedElement } from "@/components/animated-element"
+import { AnimatedElement } from "@/components/comadreja/animated-element"
 
 export function EducationSection() {
   const topics = [
