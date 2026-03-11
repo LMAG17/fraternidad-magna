@@ -13,7 +13,7 @@ export default function Page() {
         <HeroSection />
         <ProjectsSection />
         <AboutSection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </>

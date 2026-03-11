@@ -12,17 +12,35 @@ import {
 } from "@/components/ui/carousel";
 
 const projects = [
+   {
+    id: 0,
+    title: "Inmaculada",
+    category: "Transmedia",
+    description:
+      "Proximamente: exploraciones en narrativas que cruzan multiples plataformas.",
+    image: "/images/home/inmaculada.jpg",
+    href: "",
+  },
   {
     id: 1,
+    title: "Inmaculada Magna Fraternidad Teatral",
+    category: "Audiovisual",
+    description:
+      "Proximamente: nuevos proyectos en desarrollo que expandiran nuestro universo creativo.",
+    image: "/images/home/magna.jpg",
+    href: "",
+  },
+  {
+    id: 2,
     title: "Campus Stellae",
     category: "Teatro",
     description:
       "Una obra que explora el camino interior a traves de la tradicion del Camino de Santiago.",
-    image: "/images/campus/gallery/1.png",
+    image: "/images/campus/coronalengua2.gif",
     href: "/es/proyectos/campus-stellae",
   },
   {
-    id: 2,
+    id: 3,
     title: "Autobiografia de una Comadreja",
     category: "Teatro / Transmedia",
     description:
@@ -30,24 +48,7 @@ const projects = [
     image: "/images/comadreja/teatro.gif",
     href: "/es/proyectos/autobiografia-de-una-comadreja",
   },
-  {
-    id: 3,
-    title: "Proyecto 3",
-    category: "Audiovisual",
-    description:
-      "Proximamente: nuevos proyectos en desarrollo que expandiran nuestro universo creativo.",
-    image: "/placeholder.svg",
-    href: "#",
-  },
-  {
-    id: 4,
-    title: "Proyecto 4",
-    category: "Transmedia",
-    description:
-      "Proximamente: exploraciones en narrativas que cruzan multiples plataformas.",
-    image: "/placeholder.svg",
-    href: "#",
-  },
+ 
 ];
 
 export function ProjectsSection() {
@@ -80,7 +81,7 @@ export function ProjectsSection() {
             {projects.map((project) => (
               <CarouselItem
                 key={project.id}
-                className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/3"
+                className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/4"
               >
                 <Link href={project.href} className="group block">
                   <div className="relative aspect-[4/5] overflow-hidden bg-muted mb-6">
@@ -92,7 +93,7 @@ export function ProjectsSection() {
                     />
                     <div className="absolute inset-0 bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
                       {project.category}
                     </p>
@@ -102,12 +103,14 @@ export function ProjectsSection() {
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
-                    <div className="flex items-center gap-2 text-sm text-foreground pt-2">
-                      <span className="tracking-widest uppercase">
-                        Ver mas
-                      </span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </div>
+                    {!!project.href && (
+                      <div className="flex items-center gap-2 text-sm text-foreground pt-2">
+                        <span className="tracking-widest uppercase">
+                          Ver mas
+                        </span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    )}
                   </div>
                 </Link>
               </CarouselItem>

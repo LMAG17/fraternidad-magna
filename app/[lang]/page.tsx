@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function LangPage() {
-  return <div>LangPage</div>;
+  redirect("/es/proyectos/autobiografia-de-una-comadreja");
 }

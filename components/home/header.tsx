@@ -9,7 +9,7 @@ const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Proyectos", href: "#proyectos" },
   { name: "Quienes Somos", href: "#quienes-somos" },
-  { name: "Contacto", href: "#contacto" },
+  // { name: "Contacto", href: "#contacto" },
 ];
 
 export function Header() {
@@ -49,14 +49,14 @@ export function Header() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="#contacto"
             className="text-sm tracking-widest uppercase text-foreground hover:text-accent transition-colors"
           >
             Contacto
           </Link>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile menu */}

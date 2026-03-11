@@ -20,9 +20,9 @@ export default function Home() {
       <TransmediaSection />
       <EducationSection />
       <AestheticSection />
-      <GallerySection />
+      {/* <GallerySection /> */}
       <PressSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <Footer />
     </main>
   );

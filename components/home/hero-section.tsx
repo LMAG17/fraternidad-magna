@@ -39,9 +39,9 @@ export function HeroSection() {
         </p>
 
         <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground leading-tight text-balance">
-          Creacion Sin
+          Inmaculada 
           <br />
-          Limites
+          Magna Fraternidad Teatral
         </h1>
 
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
