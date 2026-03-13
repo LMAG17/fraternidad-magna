@@ -12,9 +12,9 @@ export function AboutSection() {
               Un ecosistema creativo
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Magna Fraternidad Teatral e Inmaculada Films Art Transmedia forman
-              un ecosistema creativo dedicado a la creacion escenica, la
-              produccion audiovisual y el desarrollo de narrativas transmedia.
+              <b>Magna Fraternidad Teatral </b> e <b>Inmaculada Films Art Transmedia</b> forman
+              un ecosistema creativo dedicado a la <b>creacion escenica, la
+              produccion audiovisual y el desarrollo de narrativas transmedia.</b>
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Nuestro trabajo se situa en el cruce entre teatro contemporaneo,

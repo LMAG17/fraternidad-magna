@@ -38,16 +38,14 @@ export function HeroSection() {
           Teatro &bull; Cine &bull; Transmedia
         </p>
 
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground leading-tight text-balance">
-          Inmaculada 
-          <br />
+        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground leading-tight text-balance"> 
           Magna Fraternidad Teatral
         </h1>
 
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
-          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia exploran
-          nuevas formas de contar historias a traves del teatro contemporaneo,
-          cine independiente y narrativas transmedia.
+          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia desarrollan
+          proyectos de artes escénicas, cine independiente y narrativas transmedia,
+          explorando la creación colectiva y la producción audiovisual contemporánea.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">

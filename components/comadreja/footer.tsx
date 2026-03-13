@@ -15,7 +15,7 @@ export function Footer() {
             className="h-10 md:h-14 w-auto object-contain"
           />
           <Image
-            src="/images/home/Bogotá Blanco.png"
+            src="/images/home/Bogotá Negro.png"
             alt="Alcaldia de Bogota"
             width={180}
             height={60}
