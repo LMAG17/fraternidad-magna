@@ -94,10 +94,7 @@ export function CharacterSection() {
                   <span className="text-foreground font-medium">
                     payasos sagrados
                   </span>{" "}
-                  de los pueblos nativos norteamericanos. Para estas comunidades
-                  el Heyoka no solo tiene un rol de divertimento, sino también
-                  una vocación espiritual, de curar el alma. Funciona como un
-                  espejo y un maestro.
+                  de los pueblos nativos norteamericanos. El payaso sagrado utiliza comportamientos comicos para reflejar a los demas, invitandolos a examinar sus propias dudas, miedos, odios y debilidades.
                 </p>
               </div>
             </AnimatedElement>

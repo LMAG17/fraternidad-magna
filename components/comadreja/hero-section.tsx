@@ -98,8 +98,7 @@ export function HeroSection() {
           {/* Description */}
           <AnimatedElement animation="fade-up" delay={500} duration={700}>
             <p className="max-w-xl mx-auto text-base sm:text-lg text-muted-foreground mb-10">
-              La historia de Jimi Mustela, una marioneta que fue famosa decide
-              contarse a sí misma antes de desaparecer.
+              Un proyecto que mezcla literatura, teatro, cine y arte visual para explorar lo que somos en una sociedad que lo convierte todo en mercancia.
             </p>
           </AnimatedElement>
 

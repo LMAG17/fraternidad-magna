@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Home } from "lucide-react"
 
 const navItems = [
   { href: "#proyecto", label: "El Proyecto" },
@@ -20,12 +20,20 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link 
-            href="/" 
-            className="font-[family-name:var(--font-display)] text-lg sm:text-xl tracking-tight"
-          >
-            La Comadreja
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link 
+              href="/" 
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              title="Volver al inicio"
+            >
+              <Home className="h-4 w-4" />
+              <span className="hidden sm:inline">Inicio</span>
+            </Link>
+            <span className="text-border">|</span>
+            <span className="font-[family-name:var(--font-display)] text-lg sm:text-xl tracking-tight">
+              La Comadreja
+            </span>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
@@ -54,6 +62,14 @@ export function Navigation() {
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2 text-sm font-medium text-accent hover:text-foreground transition-colors"
+              >
+                <Home className="h-4 w-4" />
+                Volver al Inicio
+              </Link>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
