@@ -158,10 +158,6 @@ const constants = {
         name: "Contactanos",
         href: "#footer",
       },
-      {
-        name: "Galeria",
-        href: "campusstellae/gallery",
-      },
     ],
     langItems: {
       buttonText: "Idioma",
@@ -536,10 +532,6 @@ const constants = {
       {
         name: "Contact",
         href: "#footer",
-      },
-      {
-        name: "Gallery",
-        href: "campusstellae/gallery",
       },
     ],
     langItems: {
