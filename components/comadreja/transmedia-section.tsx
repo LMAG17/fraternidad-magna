@@ -40,18 +40,16 @@ export function TransmediaSection() {
                     Farsa grotesca de una Marioneta Rebelde
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Jimi comparte anécdotas de su absurda autobiografía y sus
+                    Jimi comparte anecdotas de su absurda autobiografia y sus
                     puntos de vista sobre los ideales de la sociedad de consumo.
-                    El espectáculo combina diferentes técnicas escénicas con
-                    elementos de danza y teatro gestual en un escenario
-                    minimalista.
+                    El espectaculo combina diferentes tecnicas escenicas con elementos escenograficos que evocan lo urbano y la cultura popular, creando un espacio visual que dialoga con la memoria fragmentada del protagonista.
                   </p>
                   <p className="text-muted-foreground mb-6">
                     <span className="text-foreground font-medium">
                       Seis actores interpretan a un mismo personaje.
                     </span>{" "}
-                    Todos usan la misma máscara. Todos encarnan a Jimi. La voz
-                    del personaje guía la obra mientras los cuerpos se alternan,
+                    Todos usan la misma mascara. Todos encarnan a Jimi. La voz
+                    del personaje guia la obra mientras los cuerpos se alternan,
                     se duplican y se contradicen.
                   </p>
                   <div className="flex flex-wrap items-center gap-4">
@@ -100,14 +98,10 @@ export function TransmediaSection() {
                     </h3>
                   </div>
                   <p className="text-lg font-medium text-foreground mb-4">
-                    Un falso documental sobre Jimi Mustela
+                    Un falso documental sobre el ascenso al estrellato y posterior anonimato de Jimi Mustela
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    La narración se hace en tercera persona. Por momentos
-                    escuchamos apartes de entrevistas hechas a Jimi en los años
-                    70 y 80. Parodiando el género documental en su estructura y
-                    forma, al mostrar falso material de archivo, como videos,
-                    fotografías o portadas de revistas inexistentes.
+                    La imagen amplia la atmosfera del proyecto: la ciudad, los objetos, los signos del consumo y la memoria aparecen como fragmentos de una autobiografia que se construye a partir de simbolos. Parodiando el genero documental en su estructura y forma, al mostrar falso material de archivo, como videos, fotografias o portadas de revistas inexistentes.
                   </p>
                   <div className="flex flex-wrap items-center gap-4 mb-4">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">

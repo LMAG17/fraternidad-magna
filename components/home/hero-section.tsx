@@ -38,8 +38,8 @@ export function HeroSection() {
           Teatro &bull; Cine &bull; Transmedia
         </p>
 
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground leading-tight text-balance"> 
-          Magna Fraternidad Teatral
+        <h1 className="font-serif text-xl sm:text-2xl md:text-2xl lg:text-6xl text-foreground leading-tight text-balance"> 
+          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia
         </h1>
 
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">

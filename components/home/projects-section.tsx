@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/carousel";
 
 const projects = [
-   {
+  {
     id: 0,
-    title: "Inmaculada",
+    title: "Inmaculada Films Art Transmedia",
     category: "Transmedia",
     description:
       "Proximamente: exploraciones en narrativas que cruzan multiples plataformas.",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 1,
-    title: "Inmaculada Magna Fraternidad Teatral",
+    title: "Magna Fraternidad Teatral",
     category: "Audiovisual",
     description:
       "Proximamente: nuevos proyectos en desarrollo que expandiran nuestro universo creativo.",
@@ -33,9 +33,9 @@ const projects = [
   {
     id: 2,
     title: "Campus Stellae",
-    category: "Teatro",
+    category: "Teatro / Cortometraje / Videojuego",
     description:
-      "Una obra que explora el camino interior a traves de la tradicion del Camino de Santiago.",
+      "Aquileo explora el camino interior. Los personajes y monstruos que se le aparecen a Aquileo resultan ser manifestaciones de su propio ego, haciéndole ver la naturaleza de su mente y de su espíritu.",
     image: "/images/campus/coronalengua2.gif",
     href: "/es/proyectos/campus-stellae",
   },
@@ -48,7 +48,6 @@ const projects = [
     image: "/images/comadreja/teatro.gif",
     href: "/es/proyectos/autobiografia-de-una-comadreja",
   },
- 
 ];
 
 export function ProjectsSection() {

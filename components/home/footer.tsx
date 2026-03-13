@@ -48,12 +48,6 @@ export function Footer() {
             >
               Quienes Somos
             </Link>
-            <Link
-              href="#contacto"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contacto
-            </Link>
           </nav>
 
           <p className="text-sm text-muted-foreground">

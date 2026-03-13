@@ -1,114 +1,104 @@
-import { Mail, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram, Facebook, Youtube } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/magnafraternidadteatral/",
+    icon: Instagram,
+    username: "@magnafraternidadteatral"
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/magnafraternidadteatral",
+    icon: Facebook,
+    username: "Magna Fraternidad Teatral"
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@magnafraternidadteatral",
+    icon: Youtube,
+    username: "Magna Fraternidad Teatral"
+  },
+];
 
 export function ContactSection() {
   return (
     <section id="contacto" className="py-24 md:py-32 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left side */}
-          <div>
-            <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
-              Contacto
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8">
-              Conectemos
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Creemos que el arte es un espacio de encuentro. El teatro nos
-              reune en el presente, mientras que el cine y los contenidos
-              audiovisuales permiten expandir esa experiencia hacia nuevos
-              publicos y territorios digitales.
-            </p>
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Contacto
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+            Conectemos
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Creemos que el arte es un espacio de encuentro. El teatro nos
+            reune en el presente, mientras que el cine y los contenidos
+            audiovisuales permiten expandir esa experiencia hacia nuevos
+            publicos y territorios digitales.
+          </p>
+        </div>
 
-            <div className="space-y-6">
-              <a
-                href="mailto:contacto@magnafraternidad.com"
-                className="flex items-center gap-4 text-foreground hover:text-accent transition-colors group"
-              >
-                <div className="w-12 h-12 flex items-center justify-center border border-border group-hover:border-accent transition-colors">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <span className="text-lg">contacto@magnafraternidad.com</span>
-              </a>
-
-              <div className="flex gap-4 pt-4">
-                <a
-                  href="#"
-                  className="w-12 h-12 flex items-center justify-center border border-border hover:border-foreground hover:bg-foreground hover:text-background transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 flex items-center justify-center border border-border hover:border-foreground hover:bg-foreground hover:text-background transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>
-              </div>
+        {/* Contacto directo */}
+        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <a 
+            href="mailto:magnafraternidadteatral@gmail.com" 
+            className="flex items-center gap-4 p-6 bg-card border border-border hover:border-foreground transition-colors group"
+          >
+            <div className="w-14 h-14 flex items-center justify-center border border-border group-hover:border-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
+              <Mail className="h-6 w-6" />
             </div>
-          </div>
+            <div>
+              <p className="text-sm text-muted-foreground mb-1">Correo electronico</p>
+              <p className="text-foreground font-medium">magnafraternidadteatral@gmail.com</p>
+            </div>
+          </a>
+          <a 
+            href="https://wa.me/573133546955" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-6 bg-card border border-border hover:border-foreground transition-colors group"
+          >
+            <div className="w-14 h-14 flex items-center justify-center border border-border group-hover:border-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
+              <Phone className="h-6 w-6" />
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground mb-1">WhatsApp</p>
+              <p className="text-foreground font-medium">+57 313 354 6955</p>
+            </div>
+          </a>
+        </div>
 
-          {/* Right side - Contact form */}
-          <div className="bg-card p-8 md:p-12 border border-border">
-            <h3 className="font-serif text-2xl text-foreground mb-6">
-              Envianos un mensaje
-            </h3>
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm text-muted-foreground mb-2"
-                >
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full bg-input border border-border px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                  placeholder="Tu nombre"
-                />
+        {/* Redes sociales */}
+        <div className="text-center mb-8">
+          <h3 className="font-serif text-2xl text-foreground">Siguenos en redes sociales</h3>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-6">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 p-8 bg-card border border-border hover:border-foreground transition-colors group"
+            >
+              <div className="w-16 h-16 flex items-center justify-center border border-border group-hover:border-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
+                <social.icon className="h-8 w-8" />
               </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm text-muted-foreground mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full bg-input border border-border px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                  placeholder="tu@email.com"
-                />
+              <div className="text-center">
+                <p className="text-foreground font-medium">{social.name}</p>
+                <p className="text-sm text-muted-foreground">{social.username}</p>
               </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm text-muted-foreground mb-2"
-                >
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full bg-input border border-border px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
-                  placeholder="Tu mensaje..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-foreground text-background py-4 text-sm tracking-widest uppercase hover:bg-foreground/90 transition-colors"
-              >
-                Enviar Mensaje
-              </button>
-            </form>
-          </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Ubicacion */}
+        <div className="text-center mt-12 pt-8 border-t border-border">
+          <p className="text-muted-foreground">
+            Bogota, Colombia
+          </p>
         </div>
       </div>
     </section>
