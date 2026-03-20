@@ -1,28 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X, Home } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Home } from "lucide-react";
 
 const navItems = [
   { href: "#proyecto", label: "El Proyecto" },
-  { href: "#personaje", label: "Jimi Mustela" },
   { href: "#transmedia", label: "Experiencia" },
   { href: "#colegios", label: "Colegios" },
+  { href: "#reconocimientos", label: "Reconocimientos" },
   { href: "#galeria", label: "Galería" },
-  { href: "#contacto", label: "Contacto" },
-]
+];
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               title="Volver al inicio"
             >
@@ -30,8 +29,8 @@ export function Navigation() {
               <span className="hidden sm:inline">Inicio</span>
             </Link>
             <span className="text-border">|</span>
-            <span className="font-[family-name:var(--font-display)] text-lg sm:text-xl tracking-tight">
-              La Comadreja
+            <span className="font-[family-name:var(--font-comadreja)] text-lg sm:text-xl tracking-tight text-[#EF2E2E]">
+              Comadreja
             </span>
           </div>
 
@@ -85,5 +84,5 @@ export function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }

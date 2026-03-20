@@ -13,40 +13,30 @@ import {
 
 const projects = [
   {
-    id: 0,
-    title: "Inmaculada Films Art Transmedia",
-    category: "Transmedia",
-    description:
-      "Proximamente: exploraciones en narrativas que cruzan multiples plataformas.",
-    image: "/images/home/inmaculada.jpg",
-    href: "",
-  },
-  {
     id: 1,
-    title: "Magna Fraternidad Teatral",
-    category: "Audiovisual",
+    title: "Campus Stellae",
+    alt: "Campus Stellae",
+    category: "Teatro / Cortometraje / Videojuego / Libro Pop Up",
     description:
-      "Proximamente: nuevos proyectos en desarrollo que expandiran nuestro universo creativo.",
-    image: "/images/home/magna.jpg",
-    href: "",
+      "Aquileo explora el camino interior. Los personajes y monstruos que se le aparecen a Aquileo resultan ser manifestaciones de su propio ego, haciéndole ver la naturaleza de su mente y de su espíritu.",
+    image: "/images/campus/serie.gif",
+    href: "/es/proyectos/campus-stellae",
+    logo: "/images/campus/logo.png",
   },
   {
     id: 2,
-    title: "Campus Stellae",
-    category: "Teatro / Cortometraje / Videojuego",
-    description:
-      "Aquileo explora el camino interior. Los personajes y monstruos que se le aparecen a Aquileo resultan ser manifestaciones de su propio ego, haciéndole ver la naturaleza de su mente y de su espíritu.",
-    image: "/images/campus/coronalengua2.gif",
-    href: "/es/proyectos/campus-stellae",
-  },
-  {
-    id: 3,
-    title: "Autobiografia de una Comadreja",
-    category: "Teatro / Transmedia",
+    title: (
+      <>
+        Autobiografia de una <span className="text-[#EF2E2E]">Comadreja</span>
+      </>
+    ),
+    alt: "Autobiografia de una Comadreja",
+    category: "Teatro / Cortometraje / Libro Album",
     description:
       "Un viaje autobiografico que entrelaza teatro, cine y narrativa digital.",
-    image: "/images/comadreja/teatro.gif",
+    image: "/images/comadreja/background.gif",
     href: "/es/proyectos/autobiografia-de-una-comadreja",
+    logo: "/images/comadreja/header.webp",
   },
 ];
 
@@ -59,11 +49,13 @@ export function ProjectsSection() {
             <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
               Nuestro Trabajo
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground">
+            <h2 className="font-(family-name:--font-stencil) font-bold text-4xl md:text-5xl lg:text-6xl text-[#FFC842]">
               Proyectos
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md leading-relaxed">
+          <p
+            className="text-muted-foreground max-w-md leading-relaxed font-(family-name:--font-eb-garamond) text-base sm:text-lg md:text-md lg:text-lg xl:text-xl font-medium"
+          >
             Cada proyecto es una exploracion unica en el territorio donde se
             encuentran las artes escenicas, el cine y las nuevas narrativas.
           </p>
@@ -80,23 +72,36 @@ export function ProjectsSection() {
             {projects.map((project) => (
               <CarouselItem
                 key={project.id}
-                className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/4"
+                className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/2"
               >
                 <Link href={project.href} className="group block">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-muted mb-6">
+                  <div className="relative aspect-5/5 overflow-hidden bg-muted mb-6">
                     <Image
                       src={project.image}
-                      alt={project.title}
+                      alt={project.alt}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-background/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Image
+                        src={project.logo}
+                        alt={project.alt}
+                        fill
+                        className="object-contain p-4 transition-transform duration-700 fade-in"
+                      />
+                    </div>
                   </div>
                   <div className="space-y-4">
                     <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
                       {project.category}
                     </p>
-                    <h3 className="font-serif text-2xl text-foreground group-hover:text-accent transition-colors">
+                    <h3
+                      className={
+                        project.href.includes("autobiografia-de-una-comadreja")
+                          ? "font-(family-name:--font-comadreja) text-2xl text-foreground transition-colors"
+                          : "font-(family-name:--font-stencil) text-2xl text-foreground group-hover:text-[#FFC842] transition-colors"
+                      }
+                    >
                       {project.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">

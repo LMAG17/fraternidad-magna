@@ -25,7 +25,7 @@ export function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-[family-name:var(--font-display)] text-lg">La Comadreja</span>
+            <span className="font-[family-name:var(--font-comadreja)] text-lg text-[#EF2E2E]">Comadreja</span>
           </div>
           
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">

@@ -1,17 +1,19 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, Permanent_Marker } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import type { Metadata } from "next";
+import { Libre_Baskerville } from "next/font/google";
+import localFont from "next/font/local";
+import "./page.css";
 
-const spaceGrotesk = Space_Grotesk({
+const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-baskerville",
 });
 
-const permanentMarker = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-display",
+const comadreja = localFont({
+  src: "../../../../public/fonts/comadreja-regular.ttf",
+  variable: "--font-comadreja",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +47,7 @@ export default function ComadrejaLayout({
 }>) {
   return (
     <div
-      className={`${spaceGrotesk.variable} ${permanentMarker.variable} font-sans antialiased`}
+      className={`comadreja-theme ${libreBaskerville.variable} ${comadreja.variable} font-sans antialiased`}
     >
       {children}
       <Analytics />

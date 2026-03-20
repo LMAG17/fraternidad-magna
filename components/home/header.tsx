@@ -9,7 +9,7 @@ const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Proyectos", href: "#proyectos" },
   { name: "Quienes Somos", href: "#quienes-somos" },
-  // { name: "Contacto", href: "#contacto" },
+  { name: "Material para medios", href: "#material-para-medios" },
 ];
 
 export function Header() {
@@ -20,8 +20,8 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="font-serif text-xl tracking-wide text-foreground">
-              Magna Fraternidad
+            <span className="font-serif text-xl tracking-wide text-foreground font-[family-name:var(--font-stencil)]">
+              Magna <span className="text-[#FFC842] font-bold">Inmaculada</span>
             </span>
           </Link>
         </div>
@@ -42,34 +42,34 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm tracking-widest uppercase text-muted-foreground transition-colors hover:text-[#FFC842] hover:font-black"
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="#contacto"
-            className="text-sm tracking-widest uppercase text-foreground hover:text-accent transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#FFC842] text-background text-sm tracking-widest uppercase hover:bg-[#FFC842]/90 transition-colors rounded font-bold"
           >
             Contacto
           </Link>
-        </div> */}
+        </div>
       </nav>
 
       {/* Mobile menu */}
       <div
         className={cn(
           "lg:hidden fixed inset-0 z-50 bg-background transition-transform duration-300",
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
         <div className="flex items-center justify-between px-6 py-4">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="font-serif text-xl tracking-wide text-foreground">
-              Magna Fraternidad
+              Magna Fraternidad Teatral
             </span>
           </Link>
           <button
@@ -88,7 +88,7 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 text-lg tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                className="block py-3 text-lg tracking-widest uppercase text-muted-foreground hover:text-[#FFC842] hover:font-black transition-colors"
               >
                 {item.name}
               </Link>

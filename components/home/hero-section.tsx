@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -13,7 +14,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-12 xl:mt-0">
       {/* Background with subtle grid pattern */}
       <div
         className="absolute inset-0 bg-background"
@@ -34,30 +35,51 @@ export function HeroSection() {
           opacity: 1 - scrollY / 600,
         }}
       >
-        <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-6">
+        <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
           Teatro &bull; Cine &bull; Transmedia
         </p>
 
-        <h1 className="font-serif text-xl sm:text-2xl md:text-2xl lg:text-6xl text-foreground leading-tight text-balance"> 
-          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia
+        <div className="mx-auto mb-4 w-[min(82vw,200px)] sm:mb-5 sm:w-[min(72vw,240px)] md:w-[min(58vw,280px)] lg:w-[min(48vw,300px)]">
+          <Image
+            src="/images/home/inmaculada.gif"
+            alt="Inmaculada Films Art Transmedia"
+            width={400}
+            height={400}
+            unoptimized
+            priority
+            className="mx-auto h-auto w-full drop-shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+          />
+        </div>
+
+        <h1 className="font-[family-name:var(--font-stencil)] font-bold tracking-wide sm:tracking-wider text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-foreground leading-snug sm:leading-tight text-balance uppercase">
+          <span className="text-[#FFC842]">
+            Inmaculada Films Art Transmedia
+          </span>{" "}
+          <br />
+          &
+          <br />
+          <span className="text-[#FFF]"> Magna Fraternidad Teatral</span>
         </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
-          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia desarrollan
-          proyectos de artes escénicas, cine independiente y narrativas transmedia,
-          explorando la creación colectiva y la producción audiovisual contemporánea.
+        <p
+          className="mt-5 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty font-(family-name:--font-eb-garamond) text-base sm:text-lg md:text-md lg:text-lg xl:text-xl font-medium"
+        >
+          Magna Fraternidad Teatral e Inmaculada Films Art Transmedia
+          desarrollan proyectos de artes escénicas, cine independiente y
+          narrativas transmedia, explorando la creación colectiva y la
+          producción audiovisual contemporánea.
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a
             href="#proyectos"
-            className="inline-flex items-center justify-center px-8 py-4 bg-foreground text-background text-sm tracking-widest uppercase hover:bg-foreground/90 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#FFC842] text-background text-sm tracking-widest uppercase hover:bg-[#FFC842]/90 transition-colors"
           >
             Ver Proyectos
           </a>
           <a
             href="#quienes-somos"
-            className="inline-flex items-center justify-center px-8 py-4 border border-border text-foreground text-sm tracking-widest uppercase hover:bg-secondary transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 border border-border text-[#FFF] text-sm tracking-widest uppercase hover:bg-[#FFF]/10 transition-colors"
           >
             Conocenos
           </a>

@@ -43,29 +43,16 @@ export function HeroSection() {
         <div className="text-center">
           {/* Main Title */}
           <AnimatedElement animation="fade-down" duration={800}>
-            <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground leading-none tracking-tight mb-6">
-              <span className="block">Autobiografía</span>
-              <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2">
-                de una
-              </span>
-              <span className="block relative inline-block mt-2">
-                Comadreja
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  viewBox="0 0 300 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 8 Q 75 2, 150 8 T 298 6"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    className="text-accent"
-                  />
-                </svg>
-              </span>
-            </h1>
+            <div className="relative min-h-[40vh] max-w-6xl mx-auto">
+              <Image
+                src="/images/comadreja/header.webp"
+                alt="Autobiografía de una Comadreja"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-contain"
+              />
+            </div>
           </AnimatedElement>
 
           {/* Subtitle */}
@@ -75,30 +62,55 @@ export function HeroSection() {
             </p>
           </AnimatedElement>
 
+          <AnimatedElement animation="fade-left" delay={400}>
+              <div
+                id="animacion"
+                className="rounded-2xl overflow-hidden"
+              >
+                <div className="relative aspect-video">
+                  <Image
+                    src="/images/comadreja/animacion.gif"
+                    alt="Animación de Jimi Mustela"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 520px"
+                  />
+                </div>
+              </div>
+            </AnimatedElement>
+
           {/* Media Types */}
           <AnimatedElement animation="fade" delay={400} duration={700}>
             <div className="flex items-center justify-center gap-6 sm:gap-8 my-8">
-              <div className="flex items-center gap-2 text-foreground">
-                <BookOpen className="h-5 w-5" />
-                <span className="text-sm font-medium">Libro</span>
-              </div>
+              <Link href="#teatro">
+                <div className="flex items-center gap-2 text-foreground">
+                  <Theater className="h-5 w-5" />
+                  <span className="text-sm font-medium">Teatro</span>
+                </div>
+              </Link>
               <div className="h-6 w-px bg-border" />
-              <div className="flex items-center gap-2 text-foreground">
-                <Theater className="h-5 w-5" />
-                <span className="text-sm font-medium">Teatro</span>
-              </div>
+              <Link href="#cine">
+                <div className="flex items-center gap-2 text-foreground">
+                  <Film className="h-5 w-5" />
+                  <span className="text-sm font-medium">Cine</span>
+                </div>
+              </Link>
               <div className="h-6 w-px bg-border" />
-              <div className="flex items-center gap-2 text-foreground">
-                <Film className="h-5 w-5" />
-                <span className="text-sm font-medium">Cine</span>
-              </div>
+              <Link href="#libro">
+                <div className="flex items-center gap-2 text-foreground">
+                  <BookOpen className="h-5 w-5" />
+                  <span className="text-sm font-medium">Libro</span>
+                </div>
+              </Link>
             </div>
           </AnimatedElement>
 
           {/* Description */}
           <AnimatedElement animation="fade-up" delay={500} duration={700}>
             <p className="max-w-xl mx-auto text-base sm:text-lg text-muted-foreground mb-10">
-              Un proyecto que mezcla literatura, teatro, cine y arte visual para explorar lo que somos en una sociedad que lo convierte todo en mercancia.
+              Un proyecto que mezcla literatura, teatro, cine y arte visual para
+              explorar lo que somos en una sociedad que lo convierte todo en
+              mercancia.
             </p>
           </AnimatedElement>
 
@@ -108,7 +120,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto bg-foreground text-background hover:bg-foreground/90 font-medium px-8"
+                className="w-full sm:w-auto bg-[#EF2E2E] text-background hover:bg-[#EF2E2E]/90 font-medium px-8"
               >
                 <Link href="#transmedia">Ver la obra</Link>
               </Button>
@@ -116,38 +128,20 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto border-2 border-foreground hover:bg-foreground hover:text-background font-medium px-8"
+                className="w-full sm:w-auto border-2 border-[#EF2E2E] text-[#EF2E2E] hover:bg-[#EF2E2E] hover:text-background font-medium px-8"
               >
                 <Link href="#proyecto">Conocer el proyecto</Link>
               </Button>
-            </div>
-          </AnimatedElement>
-
-          <AnimatedElement animation="fade-up" delay={700} duration={700}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
               <Button
                 asChild
                 variant="ghost"
                 size="lg"
-                className="w-full sm:w-auto text-muted-foreground hover:text-foreground font-medium"
+                className="w-full sm:w-auto text-[#EF2E2E] hover:text-[#EF2E2E] hover:bg-[#EF2E2E]/10 font-black"
               >
                 <Link href="#colegios">Para colegios</Link>
               </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="lg"
-                className="w-full sm:w-auto text-muted-foreground hover:text-foreground font-medium"
-              >
-                <Link href="#prensa">Prensa / Aliados</Link>
-              </Button>
             </div>
           </AnimatedElement>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-muted-foreground" />
         </div>
       </div>
     </section>

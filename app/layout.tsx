@@ -1,7 +1,8 @@
 import { Analytics } from "@vercel/analytics/next";
-import { Inter, Playfair_Display } from "next/font/google";
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import { EB_Garamond, Inter, Playfair_Display, Stardos_Stencil } from "next/font/google";
+import localFont from "next/font/local";
+import "./page.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,6 +12,24 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+});
+
+const stardosStencil = Stardos_Stencil({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-stencil",
+});
+
+
+const comadreja = localFont({
+  src: "../public/fonts/comadreja-regular.ttf",
+  variable: "--font-comadreja",
+  display: "swap",
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-eb-garamond",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +60,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+    <html
+      lang="es"
+      className={`${inter.variable} ${playfair.variable} ${stardosStencil.variable} ${comadreja.variable} ${ebGaramond.variable}`}
+    >
       <body className="font-sans antialiased">
         {children}
         <Analytics />

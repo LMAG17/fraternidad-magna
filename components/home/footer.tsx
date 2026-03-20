@@ -28,10 +28,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <Link href="/" className="font-serif text-xl text-foreground">
-              Magna Fraternidad Teatral
+            Inmaculada Films Art Transmedia
             </Link>
             <p className="text-sm text-muted-foreground mt-1">
-              &amp; Inmaculada Films Art Transmedia
+              &amp; Magna Fraternidad Teatral
             </p>
           </div>
 

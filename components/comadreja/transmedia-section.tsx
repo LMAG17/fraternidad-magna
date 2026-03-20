@@ -13,15 +13,16 @@ export function TransmediaSection() {
           <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
             Experiencia Transmedia
           </span>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl mt-4 text-balance">
-            Tres formatos, una historia
+          <h2 className="font-[family-name:var(--font-comadreja)] text-3xl sm:text-4xl md:text-5xl mt-4 text-balance">
+            <span className="text-[#EF2E2E]">Tres</span> formatos,{" "}
+            <span className="text-[#EF2E2E]">una</span> historia
           </h2>
         </AnimatedElement>
 
         <div className="grid gap-8 lg:gap-12">
           {/* Teatro */}
           <AnimatedElement animation="fade-up" delay={100}>
-            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative">
+            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative" id="teatro">
               <div className="absolute -top-4 left-8 bg-foreground text-background px-4 py-1">
                 <span className="font-[family-name:var(--font-display)] text-sm">
                   01
@@ -32,11 +33,11 @@ export function TransmediaSection() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <Theater className="h-8 w-8" />
-                    <h3 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl">
+                    <h3 className="font-[family-name:var(--font-comadreja)] text-2xl sm:text-3xl">
                       Teatro
                     </h3>
                   </div>
-                  <p className="text-lg font-medium text-foreground mb-4">
+                  <p className="text-lg font-bold text-foreground mb-4">
                     Farsa grotesca de una Marioneta Rebelde
                   </p>
                   <p className="text-muted-foreground mb-6">
@@ -82,7 +83,7 @@ export function TransmediaSection() {
 
           {/* Cine */}
           <AnimatedElement animation="fade-up" delay={200}>
-            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative">
+            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative" id="cine">
               <div className="absolute -top-4 left-8 bg-foreground text-background px-4 py-1">
                 <span className="font-[family-name:var(--font-display)] text-sm">
                   02
@@ -93,11 +94,11 @@ export function TransmediaSection() {
                 <div className="lg:order-2">
                   <div className="flex items-center gap-3 mb-4">
                     <Film className="h-8 w-8" />
-                    <h3 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl">
+                    <h3 className="font-[family-name:var(--font-comadreja)] text-2xl sm:text-3xl">
                       Cortometraje
                     </h3>
                   </div>
-                  <p className="text-lg font-medium text-foreground mb-4">
+                  <p className="text-lg font-bold text-foreground mb-4">
                     Un falso documental sobre el ascenso al estrellato y posterior anonimato de Jimi Mustela
                   </p>
                   <p className="text-muted-foreground mb-6">
@@ -140,7 +141,7 @@ export function TransmediaSection() {
 
           {/* Libro */}
           <AnimatedElement animation="fade-up" delay={300}>
-            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative">
+            <div className="bg-background p-8 sm:p-10 border-2 border-foreground relative" id="libro">
               <div className="absolute -top-4 left-8 bg-foreground text-background px-4 py-1">
                 <span className="font-[family-name:var(--font-display)] text-sm">
                   03
@@ -151,11 +152,11 @@ export function TransmediaSection() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <BookOpen className="h-8 w-8" />
-                    <h3 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl">
+                    <h3 className="font-[family-name:var(--font-comadreja)] text-2xl sm:text-3xl">
                       Libro Ilustrado
                     </h3>
                   </div>
-                  <p className="text-lg font-medium text-foreground mb-4">
+                  <p className="text-lg font-bold text-foreground mb-4">
                     El camino a la fama a través del ridículo y la mentira
                   </p>
                   <p className="text-muted-foreground mb-6">
